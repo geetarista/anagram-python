@@ -29,6 +29,8 @@ for word in text:
     else:
         word_groups[group] = [word]
 
+word_groups = dict(filter(lambda (k, v): len(v) > 1, word_groups.items()))
+
 for group in word_groups.values():
     print ", ".join(group)
 

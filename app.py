@@ -23,6 +23,8 @@ def process():
         else:
             word_groups[group] = [word]
 
+    word_groups = dict(filter(lambda (k, v): len(v) > 1, word_groups.items()))
+
     return render_template("process.html", word_groups=word_groups)
 
 if __name__ == '__main__':
