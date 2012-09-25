@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anagram Grouper</title>
+  </head>
+  <body>
+    <h1>Anagram Grouper</h1>
+
+    <p>Your file contains the following anagrams:</p>
+
+    <ul>
+    {% for group in word_groups.values(): %}
+      <li>{{", ".join(group)}}</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
